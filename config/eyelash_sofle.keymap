@@ -41,10 +41,10 @@
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <280>;        // Miryoku "Timeless" standard is often 280ms
+            tapping-term-ms = <300>;        // Miryoku "Timeless" standard is often 280ms
             quick-tap-ms = <175>;           // Prevents accidental mods on repeated keys
             require-prior-idle-ms = <150>;  // ONLY trigger mod if you haven't typed in 150ms
-            flavor = "balanced";            // Best for fast typing/rolls
+            flavor = "hold-preferred";           
             bindings = <&kp>, <&kp>;
             hold-trigger-on-release;        // Wait until key release to decide (very safe)
         };
