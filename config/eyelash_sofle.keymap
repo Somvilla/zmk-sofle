@@ -41,8 +41,7 @@
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;       // Back to a snappier 200ms
-            quick-tap-ms = <175>;
+            tapping-term-ms = <400>;       // Back to a snappier 200ms
             flavor = "tap-preferred"; 
             bindings = <&kp>, <&kp>;
         };
