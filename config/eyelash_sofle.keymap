@@ -14,13 +14,6 @@
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
 
 / {
-    scroll_encoder: scroll_encoder {
-        compatible = "zmk,behavior-sensor-rotate";
-        #sensor-binding-cells = <0>;
-        bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-        tap-ms = <100>;
-    };
-
     behaviors {
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -28,13 +21,6 @@
             tapping-term-ms = <400>; 
             flavor = "tap-preferred"; 
             bindings = <&kp>, <&kp>;
-        };
-        u_lt: u_lt {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-            bindings = <&mo>, <&kp>;
         };
     };
 
@@ -48,7 +34,7 @@
 &kp TAB     &kp Q      &kp W         &kp E         &kp R   &kp T        &kp DOWN_ARROW   &kp Y      &kp U      &kp I      &kp O             &kp P       &kp BSLH
 &kp CAPS    &hm LGUI A &hm LALT S    &hm LCTRL D   &hm LSHFT F &kp G    &kp LEFT_ARROW   &kp H      &hm RSHFT J &hm RCTRL K &hm RALT L    &hm RGUI SEMI &kp APOS
 &kp LSHFT   &kp Z      &kp X         &kp C         &kp V   &kp B        &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA  &kp DOT           &kp FSLH    &kp ENTER
-&kp C_MUTE  &kp LCTRL  &u_lt 2 ESC   &u_lt 1 TAB   &u_lt 3 SPACE        &kp ENTER        &kp SPACE  &u_lt 5 ENTER &u_lt 4 BSPC &u_lt 6 DEL &kp RSHFT   &studio_unlock
+&kp C_MUTE  &kp LCTRL  &lt 2 ESC     &lt 1 TAB     &lt 3 SPACE          &kp ENTER        &kp SPACE  &lt 5 ENTER &lt 4 BSPC &lt 6 DEL &kp RSHFT   &studio_unlock
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
@@ -60,7 +46,7 @@
 &trans      &trans     &trans     &trans     &trans     &trans          &trans          &kp AGAIN  &kp PASTE  &kp COPY   &kp CUT    &kp UNDO   &trans
 &trans      &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &trans          &trans          &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp CAPS   &trans
 &trans      &trans     &trans     &trans     &trans     &trans          &trans          &kp INS    &kp HOME   &kp P_UP   &kp P_DN   &kp END    &trans
-&trans      &trans     &trans     &mo 2      &trans     &trans          &trans          &trans     &mo 5      &trans     &trans     &trans
+&trans      &trans     &trans     &mo 2      &trans     &trans          &trans          &trans     &mo 5      &trans     &trans     &trans     &trans
             >;
         };
 
@@ -71,7 +57,7 @@
 &trans      &trans     &trans     &trans     &trans     &trans          &trans          &trans     &msc SCRL_UP &mmv MOVE_UP &msc SCRL_DOWN &trans &trans
 &trans      &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &trans          &trans          &trans     &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans &trans
 &trans      &trans     &trans     &trans     &trans     &trans          &trans          &trans     &msc SCRL_LEFT &mkp MCLK  &msc SCRL_RIGHT &trans &trans
-&trans      &trans     &trans     &mkp RCLK  &mkp LCLK  &mkp MCLK       &trans          &trans     &trans     &trans     &trans     &trans
+&trans      &trans     &trans     &mkp RCLK  &mkp LCLK  &mkp MCLK       &trans          &trans     &trans     &trans     &trans     &trans     &trans
             >;
         };
 
@@ -82,7 +68,7 @@
 &trans      &trans     &trans     &trans     &trans     &trans          &trans          &rgb_ug RGB_SPI &rgb_ug RGB_BRI &rgb_ug RGB_EFF &rgb_ug RGB_ON &trans &trans
 &trans      &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &trans          &trans          &kp C_PREV   &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT   &trans       &trans
 &trans      &trans     &trans     &trans     &trans     &trans          &trans          &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans       &trans
-&trans      &trans     &trans     &trans     &trans     &trans          &trans          &kp C_STOP   &kp C_PP     &kp C_MUTE   &trans       &trans
+&trans      &trans     &trans     &trans     &trans     &trans          &trans          &kp C_STOP   &kp C_PP     &kp C_MUTE   &trans       &trans       &trans
             >;
         };
 
@@ -93,7 +79,7 @@
 &trans      &kp LBKT   &kp N7     &kp N8     &kp N9     &kp RBKT        &trans          &trans     &trans     &trans     &trans     &trans     &trans
 &trans      &kp SEMI   &kp N4     &kp N5     &kp N6     &kp EQUAL       &trans          &trans     &kp RSHFT  &kp RCTRL  &kp RALT   &kp RGUI   &trans
 &trans      &kp GRAVE  &kp N1     &kp N2     &kp N3     &kp BSLH        &trans          &trans     &trans     &trans     &trans     &trans     &trans
-&trans      &trans     &trans     &kp N0     &kp DOT    &kp MINUS       &trans          &trans     &trans     &trans     &trans     &trans
+&trans      &trans     &trans     &kp N0     &kp DOT    &kp MINUS       &trans          &trans     &trans     &trans     &trans     &trans     &trans
             >;
         };
 
@@ -103,8 +89,8 @@
 &trans      &trans     &trans     &trans     &trans     &trans          &trans          &trans     &trans     &trans     &trans     &trans     &trans
 &trans      &kp LBRC   &kp AMPS   &kp ASTRK  &kp LPAR   &kp RBRC        &trans          &trans     &trans     &trans     &trans     &trans     &trans
 &trans      &kp COLON  &kp DLLR   &kp PRCNT  &kp CARET  &kp PLUS        &trans          &trans     &kp RSHFT  &kp RCTRL  &kp RALT   &kp RGUI   &trans
-&trans      &kp TILDE  &kp EXCL   &kp AT     &kp HASH   &kp PIPE        &trans          &trans     &trans     &trans     &trans     &trans     &trans
-&trans      &trans     &trans     &kp LPAR   &kp RPAR   &kp UNDER       &trans          &trans     &trans     &trans     &trans     &trans
+&trans      &kp TILDE  &kp EXCL   &kp AT     &kp HASH   &kp PIPE        &trans          &trans     &kp RSHFT  &kp RCTRL  &kp RALT   &kp RGUI   &trans
+&trans      &trans     &trans     &kp LPAR   &kp RPAR   &kp UNDER       &trans          &trans     &trans     &trans     &trans     &trans     &trans
             >;
         };
 
@@ -115,7 +101,7 @@
 &trans      &kp F12    &kp F7     &kp F8     &kp F9     &kp PSCRN       &trans          &trans     &trans     &trans     &trans     &trans     &trans
 &trans      &kp F11    &kp F4     &kp F5     &kp F6     &kp SLCK        &trans          &trans     &kp RSHFT  &kp RCTRL  &kp RALT   &kp RGUI   &trans
 &trans      &kp F10    &kp F1     &kp F2     &kp F3     &kp PAUSE_BREAK &trans          &trans     &trans     &trans     &trans     &trans     &trans
-&trans      &trans     &trans     &kp K_APP  &trans     &trans          &trans          &trans     &trans     &trans     &trans     &trans
+&trans      &trans     &trans     &kp K_APP  &trans     &trans          &trans          &trans     &trans     &trans     &trans     &trans     &trans
             >;
         };
     };
