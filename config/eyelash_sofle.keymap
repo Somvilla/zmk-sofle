@@ -95,7 +95,7 @@
 &trans    &kp N1     &kp N2        &kp N3        &kp N4  &kp N5       &kp UP_ARROW     &kp N6     &kp N7     &kp N8     &kp N9           &kp N0      &kp BACKSPACE
 &trans    &kp Q      &kp W         &kp E         &kp R   &kp T        &kp DOWN_ARROW   &kp K_AGAIN      &kp K_PASTE      &kp K_COPY      &kp K_CUT            &kp K_UNDO       &kp BSLH
 &trans   &hml LEFT_GUI A      &hml LALT S         &hml LCTRL D         &hml LSHIFT F   &kp G        &kp LEFT_ARROW   &kp LEFT      &kp DOWN      &kp UP      &kp RIGHT            &hmr LEFT_GUI  SEMI    &kp APOS
-&trans   &kp Z      &kp X         &kp C         &kp V   &kp B        &kp RIGHT_ARROW  &kp N      &mmv  MOVE_LEFT     &mmv MOVE_DOWN  &mmv MOVE_UP          &mmv MOVE_RIGHT    &kp ENTER
+&trans   &kp Z      &kp X         &kp C         &kp V   &kp B        &kp RIGHT_ARROW   &mmv  MOVE_LEFT       &mmv MOVE_DOWN     &mmv MOVE_UP  &mmv MOVE_RIGHT          &mmv MOVE_RIGHT    &kp ENTER
 &trans  &kp LCTRL  &kp LEFT_GUI  &kp ESC  &lt 1 SPACE   &kp TAB    &kp ENTER         &mkp RCLK   &mkp LCLK   &kp DELETE      &kp RIGHT_SHIFT  &kp DELETE
             >;
 
