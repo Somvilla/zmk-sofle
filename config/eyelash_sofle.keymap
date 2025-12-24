@@ -13,20 +13,6 @@
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
 
-&msc {
-    acceleration-exponent = <1>;
-    time-to-max-speed-ms = <100>;
-    delay-ms = <0>;
-};
-
-&mmv {
-    time-to-max-speed-ms = <500>;
-    acceleration-exponent = <1>;
-    trigger-period-ms = <16>;
-};
-
-&soft_off { hold-time-ms = <2000>; };
-
 / {
     scroll_encoder: scroll_encoder {
         compatible = "zmk,behavior-sensor-rotate";
@@ -74,7 +60,7 @@
 &trans      &trans     &trans     &trans     &trans     &trans          &trans          &kp AGAIN  &kp PASTE  &kp COPY   &kp CUT    &kp UNDO   &trans
 &trans      &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &trans          &trans          &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp CAPS   &trans
 &trans      &trans     &trans     &trans     &trans     &trans          &trans          &kp INS    &kp HOME   &kp P_UP   &kp P_DN   &kp END    &trans
-&trans      &trans     &trans     &trans     &mo 2      &trans          &trans          &trans     &mo 5      &trans     &trans     &trans     &trans
+&trans      &trans     &trans     &mo 2      &trans     &trans          &trans          &trans     &mo 5      &trans     &trans     &trans
             >;
         };
 
@@ -85,7 +71,7 @@
 &trans      &trans     &trans     &trans     &trans     &trans          &trans          &trans     &msc SCRL_UP &mmv MOVE_UP &msc SCRL_DOWN &trans &trans
 &trans      &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &trans          &trans          &trans     &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans &trans
 &trans      &trans     &trans     &trans     &trans     &trans          &trans          &trans     &msc SCRL_LEFT &mkp MCLK  &msc SCRL_RIGHT &trans &trans
-&trans      &trans     &trans     &mkp RCLK  &mkp LCLK  &mkp MCLK       &trans          &trans     &trans     &trans     &trans     &trans     &trans
+&trans      &trans     &trans     &mkp RCLK  &mkp LCLK  &mkp MCLK       &trans          &trans     &trans     &trans     &trans     &trans
             >;
         };
 
@@ -96,7 +82,7 @@
 &trans      &trans     &trans     &trans     &trans     &trans          &trans          &rgb_ug RGB_SPI &rgb_ug RGB_BRI &rgb_ug RGB_EFF &rgb_ug RGB_ON &trans &trans
 &trans      &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &trans          &trans          &kp C_PREV   &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT   &trans       &trans
 &trans      &trans     &trans     &trans     &trans     &trans          &trans          &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans       &trans
-&trans      &trans     &trans     &trans     &trans     &trans          &trans          &kp C_STOP   &kp C_PP     &kp C_MUTE   &trans       &trans       &trans
+&trans      &trans     &trans     &trans     &trans     &trans          &trans          &kp C_STOP   &kp C_PP     &kp C_MUTE   &trans       &trans
             >;
         };
 
@@ -107,7 +93,7 @@
 &trans      &kp LBKT   &kp N7     &kp N8     &kp N9     &kp RBKT        &trans          &trans     &trans     &trans     &trans     &trans     &trans
 &trans      &kp SEMI   &kp N4     &kp N5     &kp N6     &kp EQUAL       &trans          &trans     &kp RSHFT  &kp RCTRL  &kp RALT   &kp RGUI   &trans
 &trans      &kp GRAVE  &kp N1     &kp N2     &kp N3     &kp BSLH        &trans          &trans     &trans     &trans     &trans     &trans     &trans
-&trans      &trans     &trans     &kp N0     &kp DOT    &kp MINUS       &trans          &trans     &trans     &trans     &trans     &trans     &trans
+&trans      &trans     &trans     &kp N0     &kp DOT    &kp MINUS       &trans          &trans     &trans     &trans     &trans     &trans
             >;
         };
 
@@ -118,7 +104,7 @@
 &trans      &kp LBRC   &kp AMPS   &kp ASTRK  &kp LPAR   &kp RBRC        &trans          &trans     &trans     &trans     &trans     &trans     &trans
 &trans      &kp COLON  &kp DLLR   &kp PRCNT  &kp CARET  &kp PLUS        &trans          &trans     &kp RSHFT  &kp RCTRL  &kp RALT   &kp RGUI   &trans
 &trans      &kp TILDE  &kp EXCL   &kp AT     &kp HASH   &kp PIPE        &trans          &trans     &trans     &trans     &trans     &trans     &trans
-&trans      &trans     &trans     &kp LPAR   &kp RPAR   &kp UNDER       &trans          &trans     &trans     &trans     &trans     &trans     &trans
+&trans      &trans     &trans     &kp LPAR   &kp RPAR   &kp UNDER       &trans          &trans     &trans     &trans     &trans     &trans
             >;
         };
 
@@ -129,7 +115,7 @@
 &trans      &kp F12    &kp F7     &kp F8     &kp F9     &kp PSCRN       &trans          &trans     &trans     &trans     &trans     &trans     &trans
 &trans      &kp F11    &kp F4     &kp F5     &kp F6     &kp SLCK        &trans          &trans     &kp RSHFT  &kp RCTRL  &kp RALT   &kp RGUI   &trans
 &trans      &kp F10    &kp F1     &kp F2     &kp F3     &kp PAUSE_BREAK &trans          &trans     &trans     &trans     &trans     &trans     &trans
-&trans      &trans     &trans     &kp K_APP  &trans     &trans          &trans          &trans     &trans     &trans     &trans     &trans     &trans
+&trans      &trans     &trans     &kp K_APP  &trans     &trans          &trans          &trans     &trans     &trans     &trans     &trans
             >;
         };
     };
