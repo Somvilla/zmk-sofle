@@ -70,7 +70,7 @@
 &kp TAB     &kp Q      &kp W         &kp E         &kp R   &kp T        &kp DOWN_ARROW   &kp Y      &kp U      &kp I      &kp O            &kp P       &kp BSLH
 &kp CAPS    &hml LEFT_GUI A      &hml LALT S         &hml LCTRL D         &hml LSHIFT F   &kp G        &kp LEFT_ARROW   &kp H      &hmr LSHIFT J      &hmr LCTRL K      &hmr LALT L            &hmr LEFT_GUI  SEMI    &kp APOS
 &kp LSHFT   &kp Z      &kp X         &kp C         &kp V   &kp B        &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA  &kp DOT          &kp FSLH    &kp ENTER
-&kp C_MUTE  &kp LCTRL  &kp LEFT_GUI  &kp ESC  &lt 1 SPACE   &lt 2 TAB    &kp ENTER        &kp ENTER  &kp BACKSPACE  &kp DELETE      &kp RIGHT_SHIFT  &kp DELETE
+&kp C_MUTE  &kp LCTRL  &kp LEFT_GUI  &kp ESC  &lt 1 SPACE   &lt 2 TAB    &lt 4 ENTER        &kp ENTER  &lt 3 BACKSPACE  &kp DELETE      &kp RIGHT_SHIFT  &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
