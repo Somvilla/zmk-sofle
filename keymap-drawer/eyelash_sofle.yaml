@@ -454,4 +454,4 @@ layers:
   - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:backspace-reverse-outline$$
   - $$mdi:apple-keyboard-shift$$
-  - {t: Base, h: toggle}
+  - {t: Game, h: toggle}
